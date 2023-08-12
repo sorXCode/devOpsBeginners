@@ -12,7 +12,7 @@
 <body>
     <div>
         <h1>Welcome to Photogram</h1>
-        <h2>Today is <span class="datetime"></span></h2>
+        <h2>Today is <span class="datetime"></span> <span class="timezone"></span></h2>
         <div id="flex">
             <img class="prev" src="" alt="">
             <img class="new" src="" alt="">
@@ -54,10 +54,16 @@
 
         { {/*  the time is auto updated every second  */ } }
         setInterval(() => {
-            var datetime = document.querySelector('.datetime');
+            var datetimeEl = document.querySelector('.datetime');
+            var timezoneEl = document.querySelector('.timezone');
+
             var date = new Date().toLocaleString();
-            datetime.innerHTML = date;
+            datetimeEl.innerHTML = date;
+
+            var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            timezoneEl.innerHTML = `(${timezone})`;
         }, 1000);
+        {{/*  get browser Timezone */}}
 
     </script>
 </body>
