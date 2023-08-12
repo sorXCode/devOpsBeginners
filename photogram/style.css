@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.prev {
+    order: 2;
+}
+
+.new {
+    order: 1;
+}
+img {
+    border-color: brown;
+    border-style: groove;
+    width: 200px;
+    height: 300px;
+}
+#flex { 
+    display: flex; 
+    justify-content: space-around;
+}
+.emoticon { font-size: 3rem; }
